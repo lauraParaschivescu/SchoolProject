@@ -8,7 +8,8 @@ namespace Glanetasul
         {
             bundles.Add(new ScriptBundle("~/bundles/scripts").Include(
                       "~/Scripts/bootstrap.js",
-                      "~/Scripts/jquery-3.1.1.js"));
+                      "~/Scripts/jquery-3.1.1.js",
+                      "~/Scripts/angular.js"));
 
             bundles.Add(new StyleBundle("~/bundles/styles").Include(
                       "~/Content/bootstrap.css"));

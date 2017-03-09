@@ -11,6 +11,12 @@ namespace DLA.Controllers
         // GET: Home
         public ActionResult Index()
         {
+            var absolutePath = Request.Url?.AbsolutePath ?? "";
+            if (absolutePath.EndsWith("/") == false)
+            {
+                return Redirect($"{absolutePath}/");
+            }
+
             return View();
         }
     }

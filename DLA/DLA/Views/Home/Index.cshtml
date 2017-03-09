@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>GradinaCuMere</title>
+
+    @Styles.Render("~/bundles/styles")
+    @Scripts.Render("~/bundles/scripts")
+
+    <link href="~/SPA/css/Shell.css" rel="stylesheet" />
+    
+    <script src="~/SPA/Controllers/ShellController.js"></script>
+    <script src="~/SPA/Controllers/DashboardController.js"></script>
+    <script src="~/SPA/Controllers/ClientLoginController.js"></script>
+    
+    <script src="~/SPA/App.js"></script>
+</head>
+<body>
+    <script>
+        Application.initialize();
+        $(document).ready(function () {
+            angular.bootstrap(document, ["SPA.App"]);
+        });
+    </script>
+
+    <div ui-view="Shell-Root"></div>
+</body>
+</html>
